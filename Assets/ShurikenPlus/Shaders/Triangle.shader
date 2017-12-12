@@ -38,7 +38,7 @@
         v *= size;
 
         Varyings output;
-        position.xyz += mul(Euler3x3(axis * angle), v);
+        position.xyz += mul(AngleAxis3x3(angle, axis), v);
         output.position = UnityObjectToClipPos(position);
         output.color = color * _Color;
         UNITY_TRANSFER_FOG(output, output.position);
@@ -47,7 +47,9 @@
 
     half4 Fragment(Varyings input) : SV_Target
     {
-        return input.color;
+        half4 c = input.color;
+        UNITY_APPLY_FOG(input.fogCoord, c);
+        return c;
     }
 
     ENDCG
