@@ -69,7 +69,7 @@
 
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Transparent" "Queue"="Transparent" }
         Cull off Blend SrcAlpha One ZWrite Off
         Pass
         {
