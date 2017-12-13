@@ -6,7 +6,7 @@ Shader "Shuriken Plus/Random Hexagon"
 {
     Properties
     {
-        [HDR] _Color("Color", Color) = (1, 1, 1, 1)
+        [HDR] _Color("Color", Color) = (0.5, 0.5, 0.5, 1)
         [HDR] _EdgeColor("Edge Color", Color) = (1, 1, 1, 1)
         _Randomness("Randomness", Range(0, 1)) = 0.75
     }

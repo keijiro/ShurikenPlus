@@ -6,7 +6,7 @@ Shader "Shuriken Plus/Random Triangle"
 {
     Properties
     {
-        [HDR] _Color("Color", Color) = (1, 1, 1, 1)
+        [HDR] _Color("Color", Color) = (0.5, 0.5, 0.5, 1)
         [HDR] _EdgeColor("Edge Color", Color) = (1, 1, 1, 1)
     }
 
