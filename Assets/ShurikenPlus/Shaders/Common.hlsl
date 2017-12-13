@@ -1,3 +1,6 @@
+// ShurikenPlus - Custom shader library for Unity particle system
+// https://github.com/keijiro/ShurikenPlus
+
 #include "UnityCG.cginc"
 
 // Hash function from H. Schechter & R. Bridson, goo.gl/RXiKaH
