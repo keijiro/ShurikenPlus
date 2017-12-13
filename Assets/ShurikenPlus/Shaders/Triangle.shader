@@ -1,4 +1,8 @@
-﻿Shader "Shuriken Plus/Triangle"
+﻿// ShurikenPlus - Custom shader library for Unity particle system
+// https://github.com/keijiro/ShurikenPlus
+
+// Procedurally randomized triangle mesh particle shader
+Shader "Shuriken Plus/Triangle"
 {
     Properties
     {
@@ -27,23 +31,30 @@
         float4 params : TEXCOORD0
     )
     {
+        // Extract the custom vertex data.
         float size = params.x;
         float angle = params.y;
         uint vid = params.z;
         uint seed = params.w * 0x7fffffff;
 
+        // Random triangle with centered at POSITION
         float3 v1 = RandomVector(seed + 0);
         float3 v2 = RandomVector(seed + 3);
         float3 v3 = -(v1 + v2);
-        half3 axis = RandomUnitVector(seed + 6);
 
+        // Select this vertex
         float3 v = vid == 0 ? v1 : (vid == 1 ? v2 : v3);
+
+        // Apply the rotation.
+        v = mul(AngleAxis3x3(angle, RandomUnitVector(seed + 6)), v);
+
+        // Apply the size parameter.
         v *= size;
 
+        // Vertex output
         Varyings output;
-        position.xyz += mul(AngleAxis3x3(angle, axis), v);
-        output.position = UnityObjectToClipPos(position);
-        output.color = color * _Color;
+        output.position = UnityObjectToClipPos(float4(position.xyz + v, 1));
+        output.color = color;
         output.bccoord = half3(vid == 0, vid == 1, vid == 2);
         UNITY_TRANSFER_FOG(output, output.position);
         return output;
@@ -51,17 +62,19 @@
 
     half4 Fragment(Varyings input) : SV_Target
     {
-        half4 c = input.color;
-
+        // Detect edges from the barycentric coordinates.
         float3 bcc = input.bccoord;
         float3 fw = fwidth(bcc);
-        float3 edge2 = min(smoothstep(fw / 2, fw,     bcc),
+        float3 edge3 = min(smoothstep(fw / 2, fw,     bcc),
                            smoothstep(fw / 2, fw, 1 - bcc));
-        float edge = 1 - min(min(edge2.x, edge2.y), edge2.z);
+        float edge = 1 - min(min(edge3.x, edge3.y), edge3.z);
 
-        c.rgb *= (1 + _EdgeColor * edge);
+        // Color blending
+        half4 c = input.color * (_Color + _EdgeColor * edge);
+        c.a = saturate(c.a);
 
         UNITY_APPLY_FOG(input.fogCoord, c);
+
         return c;
     }
 
