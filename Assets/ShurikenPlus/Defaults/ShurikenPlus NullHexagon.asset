@@ -5,15 +5,15 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ShurikenPlus NullTriangle
+  m_Name: ShurikenPlus NullHexagon
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
-    indexCount: 3
+    indexCount: 18
     topology: 0
     firstVertex: 0
-    vertexCount: 3
+    vertexCount: 7
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0, y: 0, z: 0}
@@ -29,11 +29,11 @@ Mesh:
   m_IsReadable: 0
   m_KeepVertices: 1
   m_KeepIndices: 1
-  m_IndexBuffer: 000001000200
+  m_IndexBuffer: 000001000200000002000300000003000400000004000500000005000600000006000100
   m_Skin: []
   m_VertexData:
     m_CurrentChannels: 1
-    m_VertexCount: 3
+    m_VertexCount: 7
     m_Channels:
     - stream: 0
       offset: 0
@@ -67,8 +67,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 36
-    _typelessdata: 000000000000000000000000000000000000000000000000000000000000000000000000
+    m_DataSize: 84
+    _typelessdata: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0

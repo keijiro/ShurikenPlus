@@ -154,7 +154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0f140b9118c1b14ebfbe570b3ce941e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: b0f140b9118c1b14ebfbe570b3ce941e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -274,7 +274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &729503904
 MonoBehaviour:
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 894431125}
   - component: {fileID: 894431124}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particles (small)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,7 +397,7 @@ ParticleSystemRenderer:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 1
   m_VertexStreams: 00030c0f0b17
-  m_Mesh: {fileID: 4300000, guid: f9437e8c531e02d40a4700a3ea332f99, type: 2}
+  m_Mesh: {fileID: 4300000, guid: eb50f45732e8ba944b23c74c84f2bc1a, type: 2}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -462,7 +462,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1921987896
+  randomSeed: -2015051437
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3736,7 +3736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1084516510
 GameObject:
@@ -3749,7 +3749,7 @@ GameObject:
   - component: {fileID: 1084516511}
   - component: {fileID: 1084516512}
   m_Layer: 0
-  m_Name: Particle System (1)
+  m_Name: Particles (large)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3815,7 +3815,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1052317893
+  randomSeed: 961767029
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4089,7 +4089,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -4130,7 +4130,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -4171,9 +4171,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotation:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
+      minMaxState: 3
+      scalar: 3.1415925
+      minScalar: -3.1415925
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -7133,7 +7133,7 @@ ParticleSystemRenderer:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 1
   m_VertexStreams: 00030c0f0b17
-  m_Mesh: {fileID: 4300000, guid: f9437e8c531e02d40a4700a3ea332f99, type: 2}
+  m_Mesh: {fileID: 4300000, guid: eb50f45732e8ba944b23c74c84f2bc1a, type: 2}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -7149,7 +7149,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210540661
 GameObject:
@@ -7205,7 +7205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1274554145 stripped
 Transform:
@@ -7254,7 +7254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &1986721143 stripped
 SkinnedMeshRenderer:

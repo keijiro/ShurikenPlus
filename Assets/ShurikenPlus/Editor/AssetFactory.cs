@@ -16,15 +16,29 @@ namespace ShurikenPlus
         [MenuItem("Assets/Create/ShurikenPlus Assets")]
         static void CreateAssets()
         {
-            AssetDatabase.CreateAsset(CreateTriangle(), "Assets/NullTriangle.asset");
+            AssetDatabase.CreateAsset(CreateNullTriangle(), "Assets/NullTriangle.asset");
+            AssetDatabase.CreateAsset(CreateNullHexagon(), "Assets/NullHexagon.asset");
             AssetDatabase.SaveAssets();
         }
 
-        static Mesh CreateTriangle()
+        static Mesh CreateNullTriangle()
         {
             var mesh = new Mesh();
             mesh.vertices = new Vector3[3];
             mesh.SetTriangles(new int[] {0, 1, 2}, 0, true);
+            mesh.UploadMeshData(true);
+            return mesh;
+        }
+
+        static Mesh CreateNullHexagon()
+        {
+            var mesh = new Mesh();
+            mesh.vertices = new Vector3[7];
+            mesh.SetTriangles(
+                new int[] {
+                    0, 1, 2,  0, 2, 3,
+                    0, 3, 4,  0, 4, 5,
+                    0, 5, 6,  0, 6, 1 }, 0, true);
             mesh.UploadMeshData(true);
             return mesh;
         }

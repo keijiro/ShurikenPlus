@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Triangle
-  m_Shader: {fileID: 4800000, guid: bd8955423f0d5494899a13fe7acbce0c, type: 3}
+  m_Name: Hexagon
+  m_Shader: {fileID: 4800000, guid: 73e51e3a2a7b3cb419200a89ecc5b47f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -66,12 +66,13 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Randomness: 0.922
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
-    - _EdgeColor: {r: 3, g: 3, b: 3, a: 1}
+    - _Color: {r: 1.052353, g: 0.7583132, b: 0.7583132, a: 1}
+    - _EdgeColor: {r: 2.81, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
