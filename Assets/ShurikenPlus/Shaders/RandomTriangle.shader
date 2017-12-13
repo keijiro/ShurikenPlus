@@ -2,7 +2,7 @@
 // https://github.com/keijiro/ShurikenPlus
 
 // Procedurally randomized triangle mesh particle shader
-Shader "Shuriken Plus/Triangle"
+Shader "Shuriken Plus/Random Triangle"
 {
     Properties
     {
@@ -82,7 +82,7 @@ Shader "Shuriken Plus/Triangle"
 
     SubShader
     {
-        Tags { "RenderType"="Transparent" "Queue"="Transparent" }
+        Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" }
         Cull off Blend SrcAlpha One ZWrite Off
         Pass
         {

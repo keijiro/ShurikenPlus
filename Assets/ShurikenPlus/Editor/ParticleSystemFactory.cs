@@ -11,25 +11,25 @@ namespace ShurikenPlus
     {
         static Material LoadDefaultMaterial(string name)
         {
-            var path = "Assets/ShurikenPlus/Defaults/ShurikenPlus" + name + ".mat";
+            var path = "Assets/ShurikenPlus/Defaults/ShurikenPlus " + name + ".mat";
             return AssetDatabase.LoadAssetAtPath<Material>(path);
         }
 
         static Mesh LoadDefaultMesh(string name)
         {
-            var path = "Assets/ShurikenPlus/Defaults/ShurikenPlus" + name + ".asset";
+            var path = "Assets/ShurikenPlus/Defaults/ShurikenPlus " + name + ".asset";
             return AssetDatabase.LoadAssetAtPath<Mesh>(path);
         }
 
-        [MenuItem("GameObject/Effects/ShurikenPlus (Triangle)")]
+        [MenuItem("GameObject/Effects/ShurikenPlus (Random Triangle)")]
         static void CreateTriangle()
         {
             var go = new GameObject("Particle System");
             go.AddComponent<ParticleSystem>();
 
             var psr = go.GetComponent<ParticleSystemRenderer>();
-            psr.sharedMaterial = LoadDefaultMaterial("Triangle");
-            psr.mesh = LoadDefaultMesh("Triangle");
+            psr.sharedMaterial = LoadDefaultMaterial("RandomTriangle");
+            psr.mesh = LoadDefaultMesh("NullTriangle");
             psr.alignment = ParticleSystemRenderSpace.World;
             psr.renderMode = ParticleSystemRenderMode.Mesh;
 

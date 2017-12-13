@@ -16,7 +16,7 @@ namespace ShurikenPlus
         [MenuItem("Assets/Create/ShurikenPlus Assets")]
         static void CreateAssets()
         {
-            AssetDatabase.CreateAsset(CreateTriangle(), "Assets/Triangle.asset");
+            AssetDatabase.CreateAsset(CreateTriangle(), "Assets/NullTriangle.asset");
             AssetDatabase.SaveAssets();
         }
 
