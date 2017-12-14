@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 114282922071361592}
   m_FixedDuration: 0
   m_EditorSettings:
-    fps: 60
+    m_Framerate: 60
   m_DurationMode: 0
 --- !u!114 &114002214270965798
 MonoBehaviour:
